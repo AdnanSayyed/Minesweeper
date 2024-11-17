@@ -1,5 +1,5 @@
-#include "../../header/UI/UIElement/TextView.h"
-#include "../../header/Global/Config.h"
+#include "../header/UI/UIElement/TextView.h"
+#include "../header/Global/Config.h"
 
 namespace UI
 {

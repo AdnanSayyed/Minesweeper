@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/main"
+  "/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/main.pdb"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/main.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/main.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Event/EventService.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Event/EventService.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Gobal/Config.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Gobal/Config.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Gobal/ServiceLocator.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Gobal/ServiceLocator.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Graphics/GraphicService.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Graphics/GraphicService.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Main/GameService.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Main/GameService.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Sound/SoundService.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/Sound/SoundService.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/Credits/CreditsScreenUIController.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/Credits/CreditsScreenUIController.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/Instructions/InstructionsScreenUIController.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/Instructions/InstructionsScreenUIController.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/MainMenu/MainMenuUIController.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/MainMenu/MainMenuUIController.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/SplashScreen/SplashScreenUIController.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/SplashScreen/SplashScreenUIController.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/AnimatedImageView.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/AnimatedImageView.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/ButtonView.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/ButtonView.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/ImageView.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/ImageView.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/TextView.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/TextView.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/UIView.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIElement/UIView.cpp.o.d"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIService.cpp.o"
+  "CMakeFiles/main.dir/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/source/UI/UIService.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/main.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

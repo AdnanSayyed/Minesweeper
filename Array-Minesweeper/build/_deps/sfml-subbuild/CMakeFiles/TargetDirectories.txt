@@ -1,0 +1,3 @@
+/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
+/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/build/_deps/sfml-subbuild/CMakeFiles/edit_cache.dir
+/Users/sayyed/Documents/Personal/Minesweeper/Array-Minesweeper/build/_deps/sfml-subbuild/CMakeFiles/rebuild_cache.dir
