@@ -3,6 +3,8 @@
 
 namespace Gameplay
 {
+	using namespace Cell;
+
 	namespace Board
 	{
 		
@@ -19,32 +21,35 @@ namespace Gameplay
 
 		void BoardController::createBoard()
 		{
-			//Yet to implement
+			cell = new CellController();
 		}
 
 		void BoardController::initialize()
 		{
 			board_view->initialize();
+			cell->initialize(15,15);
 		}
 
 		void BoardController::update()
 		{
 			board_view->update();
+			cell->update();
 		}
 
 		void BoardController::render()
 		{
 			board_view->render();
+			cell->render();
 		}
 
 		void BoardController::reset()
 		{
-			//Yet to implement
+			//cell->reset();
 		}
 
 		void BoardController::deleteBoard()
 		{
-			//Yet to implement
+			delete(cell);
 		}
 
 		void BoardController::destroy()
