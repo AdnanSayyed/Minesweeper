@@ -7,7 +7,7 @@ namespace Gameplay
 
 	namespace Board
 	{
-		
+
 		BoardController::BoardController()
 		{
 			board_view = new BoardView(this);
@@ -21,13 +21,13 @@ namespace Gameplay
 
 		void BoardController::createBoard()
 		{
-			cell = new CellController(sf::Vector2i(0,0));
+			cell = new CellController(sf::Vector2i(0, 0));
 		}
 
 		void BoardController::initialize()
 		{
 			board_view->initialize();
-			cell->initialize(15,15);
+			cell->initialize(15, 15);
 		}
 
 		void BoardController::update()
@@ -44,18 +44,26 @@ namespace Gameplay
 
 		void BoardController::reset()
 		{
-			//cell->reset();
+			// cell->reset();
 		}
 
 		void BoardController::deleteBoard()
 		{
-			delete(cell);
+			delete (cell);
 		}
 
 		void BoardController::destroy()
 		{
 			deleteBoard();
-			delete(board_view);
+			delete (board_view);
+		}
+
+		void BoardController::initializeCells()
+		{
+			float cell_width = board_view->getCellWidth();
+			float cell_height = board_view->getCellHeight();
+
+			cell->initialize(cell_width, cell_height);
 		}
 	}
 }

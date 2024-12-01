@@ -1,5 +1,5 @@
 #include "../../header/Graphics/GraphicService.h"
-
+#include <iostream>
 namespace Graphics
 {
 	GraphicService::GraphicService()
@@ -27,6 +27,9 @@ namespace Graphics
 	void GraphicService::configureVideoMode()
 	{
 		video_mode = *(new sf::VideoMode(game_window_width, game_window_height, sf::VideoMode::getDesktopMode().bitsPerPixel));
+
+
+		 
 	}
 
 	void GraphicService::onDestroy()
