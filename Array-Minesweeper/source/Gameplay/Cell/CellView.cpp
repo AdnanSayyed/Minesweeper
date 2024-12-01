@@ -1,5 +1,13 @@
 #include "../header/Gameplay/Cell/CellView.h"
 #include "../header/Global/Config.h"
+#include "../header/Gameplay/Cell/CellController.h"
+#include "../header/Gameplay/Cell/CellModel.h"
+#include "../header/Gameplay/Cell/CellController.h"
+#include "../header/Global/Config.h"
+#include "../header/Global/ServiceLocator.h"
+#include "../header/Gameplay/GameplayService.h"
+#include "../header/Sound/SoundService.h"
+
 
 namespace Gameplay
 {
@@ -7,6 +15,8 @@ namespace Gameplay
     {
         using namespace UI::UIElement;
         using namespace Global;
+        using namespace UI;
+
 
         CellView::CellView(CellController *controller)
         {
@@ -23,8 +33,8 @@ namespace Gameplay
 
         void CellView::initializeButtonImage(float width, float height)
         {
-            
-            cell_button->initialize("Cell", Config::cells_texture_path, width, height, sf::Vector2f(0.0f, 0.0f));
+
+            cell_button->initialize("Cell", Config::cells_texture_path, width * slice_count, height, sf::Vector2f(0.0f, 0.0f));
         }
 
         void CellView::update()
@@ -34,7 +44,35 @@ namespace Gameplay
 
         void CellView::render()
         {
+            setCellTexture();
             cell_button->render();
         }
+
+        void CellView::setCellTexture()
+        {
+            // Retrieves the cell's current value and converts it to an integer index
+            int index = static_cast<int>(cell_controller->getCellValue());
+
+            // Switch statement to handle different cell states
+            switch (cell_controller->getCellState())
+            {
+            case ::Gameplay::Cell::CellState::HIDDEN:
+                // If cell is hidden, then draw the 11th image, i.e. HIDDEN CELL
+                cell_button->setTextureRect(sf::IntRect(10 * tile_size, 0, tile_size, tile_size));
+                break;
+
+            case ::Gameplay::Cell::CellState::OPEN:
+                // If cell is open, draw the image depending on its cell value
+                //  'index * tile_size' shifts the rectangle to display the texture corresponding to the cell's value
+                cell_button->setTextureRect(sf::IntRect(index * tile_size, 0, tile_size, tile_size));
+                break;
+
+            case ::Gameplay::Cell::CellState::FLAGGED:
+                // If cell  is flagged, draw the 12th image, i.e. FLAG
+                cell_button->setTextureRect(sf::IntRect(11 * tile_size, 0, tile_size, tile_size));
+                break;
+            }
+        }
+
     }
 }

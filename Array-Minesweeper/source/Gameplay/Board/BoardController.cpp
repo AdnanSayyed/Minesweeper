@@ -21,7 +21,7 @@ namespace Gameplay
 
 		void BoardController::createBoard()
 		{
-			cell = new CellController();
+			cell = new CellController(sf::Vector2i(0,0));
 		}
 
 		void BoardController::initialize()
