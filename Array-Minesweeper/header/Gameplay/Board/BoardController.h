@@ -26,11 +26,14 @@ namespace Gameplay
             void update();
             void render();
             void reset();
+            
 
         private:
           	void createBoard();
             void destroy();
             void deleteBoard();
+
+            void initializeCells();
         };
     }
 }
