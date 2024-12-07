@@ -1,12 +1,12 @@
 #include "../header/Gameplay/Board/BoardController.h"
 #include "../header/Gameplay/Board/BoardView.h"
+#include "../header/Gameplay/Cell/CellController.h"
 
 namespace Gameplay
 {
-	using namespace Cell;
-
 	namespace Board
 	{
+		using namespace Cell;
 
 		BoardController::BoardController()
 		{
@@ -21,49 +21,67 @@ namespace Gameplay
 
 		void BoardController::createBoard()
 		{
-			cell = new CellController(sf::Vector2i(0, 0));
+			for (int i = 0; i < number_of_colums; i++)
+			{
+				cells[i] = new CellController(i); //Passing Cell Index in Cell Controller's constructor
+			}
 		}
 
 		void BoardController::initialize()
 		{
 			board_view->initialize();
-			cell->initialize(15, 15);
+			initializeCells();
 		}
-
-		void BoardController::update()
-		{
-			board_view->update();
-			cell->update();
-		}
-
-		void BoardController::render()
-		{
-			board_view->render();
-			cell->render();
-		}
-
-		void BoardController::reset()
-		{
-			// cell->reset();
-		}
-
-		void BoardController::deleteBoard()
-		{
-			delete (cell);
-		}
-
-		void BoardController::destroy()
-		{
-			deleteBoard();
-			delete (board_view);
-		}
-
+		
 		void BoardController::initializeCells()
 		{
 			float cell_width = board_view->getCellWidth();
 			float cell_height = board_view->getCellHeight();
 
-			cell->initialize(cell_width, cell_height);
+			for (int i = 0; i < number_of_colums; i++)
+			{
+					cells[i]->initialize(cell_width, cell_height);
+			}
+		}
+
+		void BoardController::update()
+		{
+			board_view->update();
+			for (int i = 0; i < number_of_colums; i++)
+			{
+				cells[i]->update();
+			}
+		}
+
+		void BoardController::render()
+		{
+			board_view->render();
+			for (int i = 0; i < number_of_colums; i++)
+			{
+				cells[i]->render();
+			}
+		}
+
+		void BoardController::reset()
+		{
+			for (int i = 0; i < number_of_colums; i++)
+			{
+				cells[i]->reset();
+			}
+		}
+
+		void BoardController::deleteBoard()
+		{
+			for (int i = 0; i < number_of_colums; i++)
+			{
+				delete(cells[i]);
+			}
+		}
+
+		void BoardController::destroy()
+		{
+			deleteBoard();
+			delete(board_view);
 		}
 	}
 }
