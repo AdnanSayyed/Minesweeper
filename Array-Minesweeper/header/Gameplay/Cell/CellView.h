@@ -1,11 +1,13 @@
 #pragma once
 #include "../header/UI/UIElement/ButtonView.h"
 
+
 namespace Gameplay
 {
     namespace Cell
     {
         class CellController;
+       
 
         class CellView
         {
@@ -23,6 +25,10 @@ namespace Gameplay
             void initializeButtonImage(float width, float height);
 
             void setCellTexture();
+
+            void registerButtonCallback();
+
+           void cellButtonCallback(UI::UIElement::ButtonType button_type);
 
         public:
             CellView(CellController* controller);
