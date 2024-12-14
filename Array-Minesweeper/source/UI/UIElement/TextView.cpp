@@ -9,6 +9,7 @@ namespace UI
 
 		sf::Font TextView::font_bubble_bobble;
 		sf::Font TextView::font_DS_DIGIB;
+		sf::Font TextView::font_roboto;
 
 		TextView::TextView() = default;
 
@@ -64,6 +65,9 @@ namespace UI
 				text.setFont(font_bubble_bobble);
 				break;
 			case FontType::DS_DIGIB:
+				text.setFont(font_DS_DIGIB);
+				break;
+			case FontType::ROBOTO:
 				text.setFont(font_DS_DIGIB);
 				break;
 			}
