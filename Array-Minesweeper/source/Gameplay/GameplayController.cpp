@@ -9,24 +9,35 @@ namespace Gameplay
 
     GameplayController::GameplayController() {}
 
-    GameplayController::~GameplayController() {  }
+    GameplayController::~GameplayController() {}
 
-    void GameplayController::initialize() {  }
+    void GameplayController::initialize() {}
 
     void GameplayController::update()
     {
-        
+        updateRemainingTime();
     }
 
-    void GameplayController::render() {  }
-    
-    void GameplayController::restart() 
-    { 
+    void GameplayController::render() {}
+
+    void GameplayController::restart()
+    {
         ServiceLocator::getInstance()->getBoardService()->resetBoard();
+        remaining_time = max_duration;
     }
-    
-    void GameplayController::reset() 
-    { 
+
+    void GameplayController::updateRemainingTime()
+    {
+        remaining_time -= ServiceLocator::getInstance()->getTimeService()->getDeltaTime();
+    }
+
+    float GameplayController::getRemainingTime()
+    {
+        return remaining_time;
+    }
+
+    void GameplayController::reset()
+    {
         ServiceLocator::getInstance()->getBoardService()->resetBoard();
     }
 
